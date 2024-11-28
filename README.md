@@ -22,8 +22,8 @@ This project demonstrates role-based access control (RBAC) using Spring Security
 
 1. Clone the repository:
     ```bash
-    git clone <repository-url>
-    cd <project-directory>
+    git clone https://github.com/khushal-13/Role_Based_Access-VRV_Security.git
+    cd Role_Based_Access-VRV_Security
     ```
 
 2. Install dependencies:
