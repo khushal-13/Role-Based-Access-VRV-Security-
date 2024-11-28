@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "591ff0dc-2449-4b3a-a6c3-bd0a784e6686",
+		"name": "Role Based Access",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34416607"
+	},
+	"item": [
+		{
+			"name": "journal Entry",
+			"item": [
+				{
+					"name": "Get All  Messages",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2dpMTIzIiwiaWF0IjoxNzMyODA5Mzk3LCJleHAiOjE3MzI4MTI5OTd9.fW6WekJKIPwAHZrpvvkVGXM5G2aFEWjRFvw0tXTvrxY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/journal"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Message by ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "jk",
+								"username": "jk"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/journal/id/672b27747e687b394a1bbdae"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2dpMTIzIiwiaWF0IjoxNzMyODA5Mzk3LCJleHAiOjE3MzI4MTI5OTd9.fW6WekJKIPwAHZrpvvkVGXM5G2aFEWjRFvw0tXTvrxY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"123\",\r\n    \"content\" : \"jogi123-2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/journal"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Message by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2dpIiwiaWF0IjoxNzMyNjI3MDMxLCJleHAiOjE3MzI2MzA2MzF9.POPDmiwv91cPafQGxo2FELKbtFPzOk4lMqt62x41uz0"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"tittle\",\r\n    \"content\" : \"Updated Jogi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/journal/id/6745a15724038a01f5ecc639"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Message by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2dpIiwiaWF0IjoxNzMyNjE2NTEwLCJleHAiOjE3MzI2MjAxMTB9.GOtZl05NmUUlGw24yprrg1n2ROWz3mRSQjRYtNz99mg"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/journal/id/6745a15724038a01f5ecc639"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2dpIiwiaWF0IjoxNzMyNjIwODE1LCJleHAiOjE3MzI2MjQ0MTV9.nvxm-qbG4-duqLbLR6hO64lTQcqW4-EohGgXmUNdHHk"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/user/jogi"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by Himself",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraHVzaGFsIiwiaWF0IjoxNzMyNjE5MDk0LCJleHAiOjE3MzI2MjI2OTR9.fjOOBvhdgQCJkUKozmRnBGp2Pw4q04R_lrnkIszfFTEiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraHVzaGFsIiwiaWF0IjoxNzMyNjE5MDk0LCJleHAiOjE3MzI2MjI2OTR9.fjOOBvhdgQCJkUKozmRnBGp2Pw4q04R_lrnkIszfFTE"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://localhost:8080/user"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqayIsImlhdCI6MTczMjYyMDU0NCwiZXhwIjoxNzMyNjI0MTQ0fQ.nZTHN1fL4FofMpF3NDG2O8Y7epX4KCzD_d2O3iQZoa8"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\" : \"jogi\",\r\n    \"password\" : \"000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/user/update"
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\" : \"jogi123\",\r\n    \"password\" : \"0000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/public/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2dpIiwiaWF0IjoxNzMyODA5NDc3LCJleHAiOjE3MzI4MTMwNzd9.2RPfyavRxD5Egg0-btmt-xjPB5biCqgYFSOIL_9etA4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/admin/get-users"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2dpIiwiaWF0IjoxNzMyODA5NDc3LCJleHAiOjE3MzI4MTMwNzd9.2RPfyavRxD5Egg0-btmt-xjPB5biCqgYFSOIL_9etA4"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "jk",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/admin/activate-user"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2dpIiwiaWF0IjoxNzMyNjI3NjgwLCJleHAiOjE3MzI2MzEyODB9.8F0YB4b6MdR_blPG0Zc5Me91AEx7BHCyKKYHwa_Okeo"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "jk",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/delete-user/jk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"delete-user",
+								"jk"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "khushal",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Public",
+			"item": [
+				{
+					"name": "Signup User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\" : \"jjjjj\",\r\n    \"email\" : \"jogi@gmail.com\",\r\n    \"password\" : \"0000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/public/signup"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
