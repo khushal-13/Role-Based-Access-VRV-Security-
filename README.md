@@ -18,25 +18,7 @@ This project demonstrates role-based access control (RBAC) using Spring Security
 - **JWT**: Used for token-based authentication to secure endpoints.
 - **Maven**: Project build management.
   
-## Setup and Installation
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/khushal-13/Role_Based_Access-VRV_Security.git
-    cd Role_Based_Access-VRV_Security
-    ```
-
-2. Install dependencies:
-    ```bash
-    mvn install
-    ```
-
-3. Run the application:
-    ```bash
-    mvn spring-boot:run
-    ```
-
-## Example JSON for Testing
 
 You can find the example JSON files for testing the application in the repository under the `json/` directory. Here are the steps to access and use them:
 
@@ -48,24 +30,10 @@ You can find the example JSON files for testing the application in the repositor
     ```
 
 2. **Use the JSON files**:
-    You can open the relevant `.json` file to copy and use the payloads in your Postman requests or any other API testing tool.
+    Copy and paste this Json file into Postman or any testing tool.
 
-    For example, to test the **Create Journal Entry** API, use the `create-journal-entry.json` file, which contains:
-    ```json
-    {
-      "title": "My First Journal Entry",
-      "content": "This is the content of my first journal entry."
-    }
-    ```
 
-4. **Example JSON Files**:
-    - `create-journal-entry.json`: Payload for creating a new journal entry.
-    - `update-journal-entry.json`: Payload for updating an existing journal entry.
-    - `create-admin.json`: Payload for creating a new admin user.
-    - `update-user-role.json`: Payload for updating a user’s role.
-    - `login.json`: Payload for logging in and receiving a JWT token.
-
-By using these files, you can easily test the application's functionality.
+By using this files, you can easily test the application's functionality.
 
 
 
